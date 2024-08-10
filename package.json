@@ -1,0 +1,16 @@
+{
+  "name": "gerencia_de_configuracao",
+  "version": "1.0.0",
+  "description": "Projeto exemplo para Gerência de Configuração.",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "docs": "jsdoc -c jsdoc.json"
+  },
+  "author": "Seu Nome",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jsdoc": "^3.6.11"
+  }
+}

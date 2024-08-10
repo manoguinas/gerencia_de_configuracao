@@ -1,4 +1,4 @@
-name: Build
+name: CI
 
 on: [push]
 
@@ -14,5 +14,17 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Build project
-      run: echo "Build step here"
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests with coverage
+      run: npm test
+
+    - name: Generate documentation
+      run: npm run docs
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: coverage/
